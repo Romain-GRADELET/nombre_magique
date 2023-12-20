@@ -67,56 +67,55 @@ namespace nombre_magique
             {
                 Console.WriteLine("Vous avez perdu, le nombre magique était: " + NOMBRE_MAGIQUE);
             }
+        }
+    }
 
-            //--------------- Utilisation de While
-/*         
-            int nbVies = 4;
+    //--------------- Utilisation de While
+    /*         
+                int nbVies = 4;
 
-            while (nbVies > 0)
-            {
-                Console.WriteLine();
-                Console.WriteLine("Vies restantes : " + nbVies);
-                nombre = DemanderNombre(NOMBRE_MIN, NOMBRE_MAX);
-
-                if (nombre > NOMBRE_MAGIQUE)
+                while (nbVies > 0)
                 {
-                    Console.WriteLine("Le nombre magique est plus petit");
+                    Console.WriteLine();
+                    Console.WriteLine("Vies restantes : " + nbVies);
+                    nombre = DemanderNombre(NOMBRE_MIN, NOMBRE_MAX);
+
+                    if (nombre > NOMBRE_MAGIQUE)
+                    {
+                        Console.WriteLine("Le nombre magique est plus petit");
+                    }
+                    else if (nombre < NOMBRE_MAGIQUE)
+                    {
+                        Console.WriteLine("Le nombre magique est plus grand");
+                    }
+                    else
+                    {
+                        // Pour intérrompre l'itération
+                        break;
+                    }
+                    nbVies--;
                 }
-                else if (nombre < NOMBRE_MAGIQUE)
+
+                if (nombre == NOMBRE_MAGIQUE)
                 {
-                    Console.WriteLine("Le nombre magique est plus grand");
+                    Console.WriteLine($"Bravo, vous avez trouvé le nombre magique! Il vous restait {nbVies} vie");
                 }
                 else
                 {
-                    // Pour intérrompre l'itération
-                    break;
+                    Console.WriteLine("Vous avez perdu, le nombre magique était: " + NOMBRE_MAGIQUE);
                 }
-                nbVies--;
-            }
 
-            if (nombre == NOMBRE_MAGIQUE)
-            {
-                Console.WriteLine($"Bravo, vous avez trouvé le nombre magique! Il vous restait {nbVies} vie");
-            }
-            else
-            {
-                Console.WriteLine("Vous avez perdu, le nombre magique était: " + NOMBRE_MAGIQUE);
-            }
+    */
 
-*/
+    //------ Utilisation de Random
+    /*
+                Random rand = new Random();
 
-            //------ Utilisation de Random
-/*
-            Random rand = new Random();
-
-            for (int i = 0; i < 11;  i++)
-            {
-                int valeurAléatoire = rand.Next(1, 11);
-                Console.WriteLine(valeurAléatoire);
-            }
-*/
-
-        }
-    }
+                for (int i = 0; i < 11;  i++)
+                {
+                    int valeurAléatoire = rand.Next(1, 11);
+                    Console.WriteLine(valeurAléatoire);
+                }
+    */
 
 }
