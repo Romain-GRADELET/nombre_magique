@@ -30,7 +30,6 @@ namespace nombre_magique
             return nombreUtilisateur;
         }
 
-
         static void Main(string[] args)
         {
 
@@ -42,8 +41,36 @@ namespace nombre_magique
 
             int nombre = NOMBRE_MAGIQUE + 1;
 
-            int nbVies = 4;
+            //----------------- Utilisation de For
+            for (int nbVies = 4; nbVies > 0; nbVies--) 
+            {
+                Console.WriteLine();
+                Console.WriteLine("Vies restantes : " + nbVies);
+                nombre = DemanderNombre(NOMBRE_MIN, NOMBRE_MAX);
 
+                if (nombre > NOMBRE_MAGIQUE)
+                {
+                    Console.WriteLine("Le nombre magique est plus petit");
+                }
+                else if (nombre < NOMBRE_MAGIQUE)
+                {
+                    Console.WriteLine("Le nombre magique est plus grand");
+                }
+                else
+                {
+                    Console.WriteLine($"Bravo, vous avez trouvé le nombre magique! Il vous restait {nbVies} vie");
+                    break;
+                }
+            }
+
+            if (nombre != NOMBRE_MAGIQUE)
+            {
+                Console.WriteLine("Vous avez perdu, le nombre magique était: " + NOMBRE_MAGIQUE);
+            }
+
+            //--------------- Utilisation de While
+/*         
+            int nbVies = 4;
 
             while (nbVies > 0)
             {
@@ -76,7 +103,9 @@ namespace nombre_magique
                 Console.WriteLine("Vous avez perdu, le nombre magique était: " + NOMBRE_MAGIQUE);
             }
 
+*/
 
+            //------ Utilisation de Random
 /*
             Random rand = new Random();
 
